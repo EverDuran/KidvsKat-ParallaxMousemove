@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax | Efecto Mouse Move</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!--  ul#escena>li.layer*4 -->
+        <h2 class="object" data-value="3">FONDO <br><span>ESPACIAL</span></h2>
+        <img src="images/soplo.png" class="object" data-value="10" alt="" id="soplo">
+        <img src="images/cohete.png" class="object" data-value="-20" alt="" id="cohete">
+        <img src="images/senial.png" class="object" data-value="40" alt="" id="senial">
+        <img src="images/soporte.png" class="object" data-value="-10" alt="" id="soporte">
+        <img src="images/astronauta.png" class="object" data-value="10" alt="" id="astronauta">
+        <img src="images/mundo1.png" class="object" data-value="-30" alt="" id="mundo1">
+        <img src="images/asteroride1.png" class="object" data-value="-40" alt="" id="asteroride1">
+        <img src="images/asteroide2.png" class="object" data-value="-20" alt="" id="asteroide2">
+        <img src="images/mundo2.png" class="object" data-value="-30" alt="" id="mundo2">
+        <img src="images/logo.png" class="object" data-value="20" alt="" id="logo">
+
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener("mousemove", parallax)
+        function parallax(e) {
+            document.querySelectorAll(".object").forEach(function (move) {
+                var moving_value = move.getAttribute("data-value");
+                var x = (e.clientX * moving_value) / 250;
+                var y = (e.clientY * moving_value) / 250;
+                move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+            });
+        }
+    </script>
+
+</body>
+
+</html>

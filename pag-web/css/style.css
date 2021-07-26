@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./../images/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.container h2{
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    font-size: 7vmax;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 32px;
+    line-height: 5vmax;
+}
+
+.container h2 span{
+    font-size: 5.5vmax;
+    font-weight: 500;
+    letter-spacing: 10px;
+}
+
+#soporte{
+   top: 100px;
+}
